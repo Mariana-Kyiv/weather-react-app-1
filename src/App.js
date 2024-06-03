@@ -8,7 +8,7 @@ function App() {
       <div className="container">
       <Weather />
       <footer>
-        <p>This project was made by Mariana Marynchenko and it's open-sourced on <a href="https://github.com/Mariana-Kyiv/weather-react-app-1" target='_blank' rel="noreferrer">GitHub</a></p>
+        <center>This project was made by Mariana Marynchenko and it's open-sourced on <a href="https://github.com/Mariana-Kyiv/weather-react-app-1" target='_blank' rel="noreferrer">GitHub</a></center>
       </footer>
     </div>
     </div>
