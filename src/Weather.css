@@ -1,7 +1,7 @@
 .Weather{
     margin: 30px auto;
     padding: 20px;
-    max-width: 660px;
+    max-width: 550px;
     border: 1px solid #0069D9;
     background-color: #F7FBFC;
     border-radius: 4px;
@@ -28,6 +28,7 @@
 .Weather img {
     display: inline-block;
     height: 64px;
+    margin-right: 20px;
 }
 .Weather .temperature {
 font-weight: 400;
@@ -37,5 +38,8 @@ line-height: 64px;
 }
 
 .Weather .unit {
-font-size: 40px;
+font-size: 16px;
+text-align: left;
+font-weight: 400;
+margin-left: 5px;
 }
