@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./Weather.css"
 import axios from "axios";
 import ClipLoader from "react-spinners/ClipLoader";
+import FormattedDate from "./FormattedDate"
 
 
  export default function Weather (props) {
@@ -17,7 +18,7 @@ import ClipLoader from "react-spinners/ClipLoader";
             description: response.data.weather[0].description,
             visibility: response.data.visibility,
             icon: `https://openweathermap.org/img/wn/${response.data.weather[0].icon}.png`,
-          
+            date: new Date(response.data.dt * 1000),
         });
         console.log(response.data);
         setReady(true);
@@ -35,7 +36,7 @@ import ClipLoader from "react-spinners/ClipLoader";
         </form>
         <h1>{weatherData.city}</h1>
         <ul>
-            <li>Sunday 18:00</li>
+            <li><FormattedDate date={weatherData.date} /></li>
             <li className="text-capitalize">{weatherData.description}</li>
         </ul>
         <div className="row">
