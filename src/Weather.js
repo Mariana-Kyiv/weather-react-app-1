@@ -3,7 +3,8 @@ import "./Weather.css"
 import axios from "axios";
 import ClipLoader from "react-spinners/ClipLoader";
 
- export default function Weather (){
+
+ export default function Weather (props) {
     const [ready, setReady] = useState(false);
     const [weatherData, setWeatherData] = useState({});
 
@@ -57,11 +58,10 @@ import ClipLoader from "react-spinners/ClipLoader";
     }
     else {
 const apiKey = `197ef3a642b76eef90e131866f74a0a0`;
-let city =`Kyiv`;
-const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=${apiKey}&units=metric`;
 axios.get(apiUrl).then(handleResponse);
     return(
-        <div className="text-center">
+        <div className="text-center mt-5">
             <p>Loading...</p>
       <ClipLoader
         color="#0069D9"
