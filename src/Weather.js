@@ -20,7 +20,6 @@ import FormattedDate from "./FormattedDate"
             icon: `https://openweathermap.org/img/wn/${response.data.weather[0].icon}.png`,
             date: new Date(response.data.dt * 1000),
         });
-        console.log(response.data);
         setReady(true);
     }
 
@@ -35,10 +34,7 @@ import FormattedDate from "./FormattedDate"
             </div>
         </form>
         <h1>{weatherData.city}</h1>
-        <ul>
-            <li><FormattedDate date={weatherData.date} /></li>
-            <li className="text-capitalize">{weatherData.description}</li>
-        </ul>
+      
         <div className="row">
             <div className="col-6 d-flex align-items-start">
             <img src={weatherData.icon} alt={weatherData.description}></img>
@@ -54,6 +50,10 @@ import FormattedDate from "./FormattedDate"
                 </ul>
             </div>
         </div>
+          <ul>
+             <li className="text-capitalize">{weatherData.description}</li>
+            <li><FormattedDate date={weatherData.date} /></li>
+        </ul>
        </div> 
     )
     }
