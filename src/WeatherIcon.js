@@ -1,94 +1,34 @@
-import React from 'react';
-import  { WeatherSvg } from "weather-icons-animated";
+import React from "react";
+import ReactAnimatedWeather from "react-animated-weather";
 
 export default function WeatherIcon(props) {
-    if (props.code === "01d") {
-   return (
-    <WeatherSvg state="sunny" width={80} height={80} />);
-    }
+  const codeMapping = {
+    "01d": "CLEAR_DAY",
+    "01n": "CLEAR_NIGHT",
+    "02d": "PARTLY_CLOUDY_DAY",
+    "02n": "PARTLY_CLOUDY_NIGHT",
+    "03d": "PARTLY_CLOUDY_DAY",
+    "03n": "PARTLY_CLOUDY_NIGHT",
+    "04d": "CLOUDY",
+    "04n": "CLOUDY",
+    "09d": "RAIN",
+    "09n": "RAIN",
+    "10d": "RAIN",
+    "10n": "RAIN",
+    "11d": "RAIN",
+    "11n": "RAIN",
+    "13d": "SNOW",
+    "13n": "SNOW",
+    "50d": "FOG",
+    "50n": "FOG",
+  };
 
-     if (props.code === "01n") {
-   return (
-    <WeatherSvg state="clear-night" width={80} height={80} />);
-    }
-
-     if (props.code === "02d") {
-   return (
-    <WeatherSvg state="partlycloudy" width={80} height={80} />);
-    }
-
-     if (props.code === "02n") {
-   return (
-    <WeatherSvg state="partlycloudy" width={80} height={80} />);
-    }
-
-     if (props.code === "03d") {
-   return (
-    <WeatherSvg state="cloudy" width={80} height={80} />);
-    }
-
-     if (props.code === "03n") {
-   return (
-    <WeatherSvg state="cloudy" width={80} height={80} />);
-    }
-
-     if (props.code === "04d") {
-   return (
-    <WeatherSvg state="cloudy" width={80} height={80} />);
-    }
-
-        if (props.code === "04n") {
-   return (
-    <WeatherSvg state="cloudy" width={80} height={80} />);
-    }
-
-        if (props.code === "09d") {
-   return (
-    <WeatherSvg state="rainy" width={80} height={80} />);
-    }
-
-        if (props.code === "09n") {
-   return (
-    <WeatherSvg state="rainy" width={80} height={80} />);
-    }
-
-        if (props.code === "10d") {
-   return (
-    <WeatherSvg state="pouring" width={80} height={80} />);
-    }
-
-        if (props.code === "10n") {
-   return (
-    <WeatherSvg state="pouring" width={80} height={80} />);
-    }
-
-        if (props.code === "11d") {
-   return (
-    <WeatherSvg state="lightning-rainy" width={80} height={80} />);
-    }
-
-        if (props.code === "11n") {
-   return (
-    <WeatherSvg state="lightning-rainy" width={80} height={80} />);
-    }
-
-        if (props.code === "13d") {
-   return (
-    <WeatherSvg state="snowy" width={80} height={80} />);
-    }
-
-        if (props.code === "13n") {
-   return (
-    <WeatherSvg state="snowy" width={80} height={80} />);
-    }
-
-         if (props.code === "50d") {
-   return (
-    <WeatherSvg state="fog" width={80} height={80} />);
-    }
-
-         if (props.code === "50n") {
-   return (
-    <WeatherSvg state="fog" width={80} height={80} />);
-    }
+  return (
+    <ReactAnimatedWeather
+      icon={codeMapping[props.code]}
+      color="#0069D9"
+      size={45}
+      animate={true}
+    />
+  );
 }
