@@ -3,6 +3,7 @@ import "./Weather.css"
 import axios from "axios";
 import ClipLoader from "react-spinners/ClipLoader";
 import WeatherInfo from "./WeatherInfo";
+import WeatherForecast from "./WeatherForecast";
 
 
  export default function Weather (props) {
@@ -50,6 +51,7 @@ import WeatherInfo from "./WeatherInfo";
             </div>
         </form>
         <WeatherInfo info={weatherData} />
+         <WeatherForecast />
     
        </div> 
     )

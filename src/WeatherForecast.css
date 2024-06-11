@@ -1,0 +1,13 @@
+.WeatherForecast {
+    text-align: center;
+    border-radius: 4px;
+}
+
+.ForecastTempNight {
+    opacity: 0.6;
+    margin-left: 5px;
+}
+
+.ForecastTempDay {
+    font-weight: bold;
+}
