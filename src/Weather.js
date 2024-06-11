@@ -21,6 +21,7 @@ import WeatherForecast from "./WeatherForecast";
             visibility: response.data.visibility,
             icon: response.data.weather[0].icon,
             date: new Date(response.data.dt * 1000),
+            coordinates: response.data.coord,
         });
         setReady(true);
     }
@@ -51,7 +52,7 @@ import WeatherForecast from "./WeatherForecast";
             </div>
         </form>
         <WeatherInfo info={weatherData} />
-         <WeatherForecast />
+         <WeatherForecast coordinates={weatherData.coordinates} />
     
        </div> 
     )
