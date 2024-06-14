@@ -8,7 +8,7 @@ function App() {
       <div className="container">
       <Weather defaultCity="Kyiv" />
       <footer>
-        <center>This project was made by Mariana Marynchenko and it's open-sourced on <a href="https://github.com/Mariana-Kyiv/weather-react-app-1" target='_blank' rel="noreferrer">GitHub</a></center>
+        <center>This project was made by <a href='https://m-marynchenko-portfolio.netlify.app/' target='_blank' rel="noreferrer"> Mariana Marynchenko</a> and it's open-sourced on <a href="https://github.com/Mariana-Kyiv/weather-react-app-1" target='_blank' rel="noreferrer">GitHub</a></center>
       </footer>
     </div>
     </div>
